@@ -50,7 +50,7 @@
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);
-				newPositionX = 12
+				
 			}
 
 			// changes the text displayed on the Box
@@ -78,14 +78,14 @@
 
 				positionX = positionX + speed;
 
-				moveBoxTo(positionX)
+				moveBoxTo(positionX);
 
 				if (positionX > boardWidth){
 					speed = -speed;
 				}
 				
 				else if (positionX < 0){
-					speed = +speed;
+					speed = -speed;
 				}
 
 			};
@@ -100,19 +100,19 @@
 				changeBoxText(points);
 				points = points + 1;
 				if (speed >= 0){
-					speed = speed + 3;
+					speed = speed + 4;
 				}
 				if(speed <= 0){
-				speed = speed - 3
+				speed = speed - 4
 				}
 
 			}
 				/*
 				The speed part above breaks the code. ^^
-				/*
+				*/
 
-			};
-		})();
+			})();
+		
 	</script>
 </body>
 </html>
